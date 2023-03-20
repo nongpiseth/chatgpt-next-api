@@ -15,7 +15,9 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "outDir": "build",
-    "noEmit": true
+    "noEmit": true,
+    "incremental": true,
+    "jsx": "preserve"
   },
   "exclude": [
     "node_modules",
