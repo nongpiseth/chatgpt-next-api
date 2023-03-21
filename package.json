@@ -9,15 +9,14 @@
     "express"
   ],
   "scripts": {
-    "start": "esno ./pages/api/index.ts",
+    "start": "node index.js",
     "dev": "esno watch ./pages/api/index.ts",
     "prod": "esno ./build/index.js",
-    "build": "yarn run make-q && next build",
+    "build": "pnpm clean && tsup",
     "clean": "rimraf build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "common:cleanup": "rimraf node_modules && rimraf pnpm-lock.yaml",
-    "make-q": "node ./build.js"
+    "common:cleanup": "rimraf node_modules && rimraf pnpm-lock.yaml"
   },
   "dependencies": {
     "@types/node": "18.15.3",
