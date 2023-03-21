@@ -76,4 +76,4 @@ app.use('', router)
 app.use('/api', router)
 
 // app.listen(3002, () => globalThis.console.log('Server is running on port 3002'))
-module.exports = app
+//module.exports = app
