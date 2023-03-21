@@ -12,11 +12,12 @@
     "start": "esno ./pages/api/index.ts",
     "dev": "esno watch ./pages/api/index.ts",
     "prod": "esno ./build/index.js",
-    "build": "pnpm clean && tsup",
+    "build": "yarn run make-q && next build",
     "clean": "rimraf build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "common:cleanup": "rimraf node_modules && rimraf pnpm-lock.yaml"
+    "common:cleanup": "rimraf node_modules && rimraf pnpm-lock.yaml",
+    "make-q": "node ./build.js"
   },
   "dependencies": {
     "@types/node": "18.15.3",
