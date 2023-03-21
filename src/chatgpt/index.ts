@@ -6,6 +6,7 @@ import { SocksProxyAgent } from 'socks-proxy-agent'
 import fetch from 'node-fetch'
 import { sendResponse } from '../utils'
 import type { ApiModel, ChatContext, ChatGPTUnofficialProxyAPIOptions, ModelConfig } from '../types'
+
 const ErrorCodeMessage: Record<string, string> = {
   401: '[OpenAI] Incorrect API key provided',
   403: '[OpenAI] Server refused to access, please try again later',

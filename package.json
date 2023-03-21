@@ -1,16 +1,21 @@
 {
-  "name": "chatgpt-next-api",
-  "version": "0.1.0",
-  "private": true,
+  "name": "chatgpt-web-service",
+  "version": "1.0.0",
+  "private": false,
+  "description": "ChatGPT Web Service",
+  "author": "ChenZhaoYu <chenzhaoyu1994@gmail.com>",
   "keywords": [
     "chatgpt-web",
     "chatgpt",
     "chatbot",
     "express"
   ],
+  "engines": {
+    "node": "^16 || ^18"
+  },
   "scripts": {
-    "start": "node index.js",
-    "dev": "esno watch ./pages/api/index.ts",
+    "start": "esno ./src/index.ts",
+    "dev": "esno watch ./src/index.ts",
     "prod": "esno ./build/index.js",
     "build": "pnpm clean && tsup",
     "clean": "rimraf build",
@@ -19,22 +24,13 @@
     "common:cleanup": "rimraf node_modules && rimraf pnpm-lock.yaml"
   },
   "dependencies": {
-    "@types/node": "18.15.3",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
     "chatgpt": "^5.0.8",
     "dotenv": "^16.0.3",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
     "esno": "^0.16.3",
     "express": "^4.18.2",
     "isomorphic-fetch": "^3.0.0",
-    "next": "12.3.1",
     "node-fetch": "^3.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "socks-proxy-agent": "^7.0.0",
-    "typescript": "5.0.2"
+    "socks-proxy-agent": "^7.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",

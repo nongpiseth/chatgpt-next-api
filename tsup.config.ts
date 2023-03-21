@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['pages/api/index.ts'],
+  entry: ['src/index.ts'],
   outDir: 'build',
   target: 'es2020',
   format: ['cjs'],

@@ -1,7 +1,7 @@
 import express from 'express'
-import type { ChatContext, ChatMessage } from './../chatgpt'
-import { chatConfig, chatReplyProcess } from './../chatgpt'
-import { auth } from './../middleware/auth'
+import type { ChatContext, ChatMessage } from './chatgpt'
+import { chatConfig, chatReplyProcess } from './chatgpt'
+import { auth } from './middleware/auth'
 
 const app = express()
 const router = express.Router()
@@ -74,5 +74,6 @@ router.post('/verify', async (req, res) => {
 
 app.use('', router)
 app.use('/api', router)
+
 app.listen(3002, () => globalThis.console.log('Server is running on port 3002'))
 module.exports = app
